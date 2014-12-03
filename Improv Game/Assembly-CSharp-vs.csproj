@@ -46,7 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\ChoiceText.cs" />
+     <Compile Include="Assets\GamePhases.cs" />
+     <Compile Include="Assets\WriterControls.cs" />
+     <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
+     <None Include="Assets\XInputDotNet\MITLicense.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
