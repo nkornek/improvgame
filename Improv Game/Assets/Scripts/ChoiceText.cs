@@ -39,7 +39,6 @@ public class ChoiceText : MonoBehaviour {
 	{
         if (canChoose)
         {
-            print(choice);
             selection = choiceText[choice].text;
             choiceDetails.text = details + " " + selection;
         }

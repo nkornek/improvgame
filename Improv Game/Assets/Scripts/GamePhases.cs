@@ -6,8 +6,15 @@ public class GamePhases : MonoBehaviour {
 	public enum GameState {writer, director, actor}
 	public GameState gameState;
 
+
+
 	// Use this for initialization
 	void Start () {
+        gameState = GameState.writer;
+        if (gameState == GameState.writer)
+        { 
+
+        }
 	
 	}
 	
