@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{C2A4DF60-B753-1C45-9765-B487118EE791}</ProjectGuid>
+	<ProjectGuid>{81862580-42DA-D280-727C-3262504F4108}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,11 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GetControllers.cs" />
-     <Compile Include="Assets\Scripts\ChoiceText.cs" />
-     <Compile Include="Assets\Scripts\GamePhases.cs" />
-     <Compile Include="Assets\Scripts\WriterControls.cs" />
-     <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
+     <Compile Include="Assets\PlayersInGame.js" />
      <None Include="Assets\XInputDotNet\MITLicense.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

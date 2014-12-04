@@ -46,9 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ChoiceText.cs" />
-     <Compile Include="Assets\GamePhases.cs" />
-     <Compile Include="Assets\WriterControls.cs" />
+     <Compile Include="Assets\GetControllers.cs" />
+     <Compile Include="Assets\Scripts\ChoiceText.cs" />
+     <Compile Include="Assets\Scripts\GamePhases.cs" />
+     <Compile Include="Assets\Scripts\WriterControls.cs" />
      <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <None Include="Assets\XInputDotNet\MITLicense.txt" />
  <Reference Include="UnityEngine.UI">
