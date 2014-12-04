@@ -10,6 +10,8 @@ public class ChoiceText : MonoBehaviour {
 	public Text choiceDetails;
 	public string details, selection;
 
+    public bool canChoose;
+
 	// Use this for initialization
 	void Start () {
 		SetText ();
@@ -33,9 +35,14 @@ public class ChoiceText : MonoBehaviour {
 		choiceDetails.text = details + " " + selection;
 	}
 
-	public void chooseText(int choice)
+	public void ChooseText(int choice)
 	{
-		selection = choiceStrings [choice];
+        if (canChoose)
+        {
+            print(choice);
+            selection = choiceText[choice].text;
+            choiceDetails.text = details + " " + selection;
+        }
 	}
 
 
