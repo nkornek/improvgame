@@ -9,6 +9,7 @@ public class GetControllers : MonoBehaviour {
     GamePadState state;
     GamePadState prevState;
     public bool[] playerInGame;
+    public int playersInGame;
 
 
     //display disconnection
@@ -16,6 +17,10 @@ public class GetControllers : MonoBehaviour {
     public Text disconnectText;
     public Image[] disconnectUI;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +33,7 @@ public class GetControllers : MonoBehaviour {
         disconnectUI[0].enabled = false;
         disconnectUI[1].enabled = false;
         disconnectText.enabled = false;
+        
         foreach (Image image in disconnection)
         {
             image.enabled = false;
@@ -58,6 +64,16 @@ public class GetControllers : MonoBehaviour {
                 disconnectUI[1].enabled = true;
                 disconnectText.enabled = true;
                 disconnection[i].enabled = true;
+            }
+        }
+
+        //count number of players
+        playersInGame = 0;
+        for (int i = 0; i < 4; i++)
+        {
+            if (playerInGame[i] & controllerConnected[i])
+            {
+                playersInGame++;
             }
         }
 
