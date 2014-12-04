@@ -31,14 +31,22 @@ public class WriterControls : MonoBehaviour {
 	{
         int randomInt = Random.Range(0, 4);
         //check if player is in game
-        if (controllerMaster.controllerConnected[randomInt] & controllerMaster.playerInGame[randomInt])
-        { 
-
+        PlayerIndex testPlayerIndex = (PlayerIndex)randomInt;
+        GamePadState testState = GamePad.GetState(testPlayerIndex);
+        if (controllerMaster.controllerConnected[randomInt]
+            & controllerMaster.playerInGame[randomInt]
+            & testState.IsConnected)
+        {
+            playerIndex = (PlayerIndex)randomInt;
+            GamePad.SetVibration(playerIndex, 1, 1);
+            Invoke("StopRumble", 0.3f);
+            print("Player " + (randomInt + 1));
         }
-		int whichPlayer = 0;
-		playerIndex = (PlayerIndex)whichPlayer;
-        GamePad.SetVibration(playerIndex, 1, 1);
-        Invoke("StopRumble", 0.3f);
+        else
+        {
+            choosePlayer();
+        }
+		
 		
 	}
 
