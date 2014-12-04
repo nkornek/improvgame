@@ -1,0 +1,14 @@
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\OpenNI.Net.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\ZDK.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Nick\Documents\SourceTree\improvGame\Improv Game\obj\Debug\Assembly-CSharp-firstpass.pdb

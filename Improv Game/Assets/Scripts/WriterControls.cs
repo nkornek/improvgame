@@ -4,6 +4,8 @@ using XInputDotNetPure;
 
 public class WriterControls : MonoBehaviour {
     public GetControllers controllerMaster;
+    public bool[] playerHasActed;
+    public int playersWhoHaveActed;
 
 	PlayerIndex playerIndex;
     GamePadState state;
@@ -11,7 +13,7 @@ public class WriterControls : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        controllerMaster = GameObject.Find("Controllers").GetComponent<GetControllers>();
 	}
 	
 	// Update is called once per frame
@@ -33,14 +35,26 @@ public class WriterControls : MonoBehaviour {
         //check if player is in game
         PlayerIndex testPlayerIndex = (PlayerIndex)randomInt;
         GamePadState testState = GamePad.GetState(testPlayerIndex);
-        if (controllerMaster.controllerConnected[randomInt]
-            & controllerMaster.playerInGame[randomInt]
-            & testState.IsConnected)
+        if (controllerMaster.controllerConnected[randomInt] & controllerMaster.playerInGame[randomInt] & testState.IsConnected)
         {
             playerIndex = (PlayerIndex)randomInt;
             GamePad.SetVibration(playerIndex, 1, 1);
             Invoke("StopRumble", 0.3f);
             print("Player " + (randomInt + 1));
+            playerHasActed[randomInt] = true;
+            //check if all players have had a turn
+            playersWhoHaveActed = 0;
+            for (int i = 0; i < 4; i++)
+            {
+                if (playerHasActed[i])
+                {
+                    playersWhoHaveActed++;
+                }
+            }
+            if (playersWhoHaveActed >= controllerMaster.playersInGame)
+            {
+
+            }
         }
         else
         {
