@@ -53,6 +53,10 @@ public class GetControllers : MonoBehaviour {
                 {
                     playerInGame[i] = true;
                 }
+                if (prevState.Buttons.Back == ButtonState.Released && state.Buttons.Back == ButtonState.Pressed)
+                {
+                    playerInGame[i] = false;
+                }
  
             }
             
