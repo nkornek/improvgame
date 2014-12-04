@@ -29,7 +29,12 @@ public class WriterControls : MonoBehaviour {
 	
 	public void choosePlayer()
 	{
-        
+        int randomInt = Random.Range(0, 4);
+        //check if player is in game
+        if (controllerMaster.controllerConnected[randomInt] & controllerMaster.playerInGame[randomInt])
+        { 
+
+        }
 		int whichPlayer = 0;
 		playerIndex = (PlayerIndex)whichPlayer;
         GamePad.SetVibration(playerIndex, 1, 1);
