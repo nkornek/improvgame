@@ -1,54 +1,90 @@
 fileFormatVersion: 2
-guid: dbb8ee97697aa834090058be68139654
+guid: 32cb33d73aa0b0745a8817aa8fc6dc6c
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Arm.L
-    100002: Arm.R
-    100004: Armature
-    100006: Bone.01
-    100008: Bone.11
-    100010: //RootNode
-    100012: Foolt.L
-    100014: Foot.r.R
-    100016: Forearm.L
-    100018: Forearm.R
-    100020: Hand.L
-    100022: Hand.r.R
-    100024: Head
-    100026: Hip.L
-    100028: Hip.R
-    100030: Neck'
-    100032: Plane
-    100034: Shin.L
-    100036: Shin.r.R
-    100038: Shoulder.L
-    100040: Shoulder.R
-    100042: Thigh.L
-    100044: Thigh.r.R
-    400000: Arm.L
-    400002: Arm.R
-    400004: Armature
-    400006: Bone.01
-    400008: Bone.11
-    400010: //RootNode
-    400012: Foolt.L
-    400014: Foot.r.R
-    400016: Forearm.L
-    400018: Forearm.R
-    400020: Hand.L
-    400022: Hand.r.R
-    400024: Head
-    400026: Hip.L
-    400028: Hip.R
-    400030: Neck'
-    400032: Plane
-    400034: Shin.L
-    400036: Shin.r.R
-    400038: Shoulder.L
-    400040: Shoulder.R
-    400042: Thigh.L
-    400044: Thigh.r.R
+    100000: Armature
+    100002: Bone.00
+    100004: Bone.01
+    100006: Bone.02
+    100008: Bone.03
+    100010: Bone.04
+    100012: Bone.05
+    100014: Bone.06
+    100016: Bone.07
+    100018: Bone.08
+    100020: Bone.09
+    100022: Bone.10
+    100024: Bone.11
+    100026: Bone.12
+    100028: Bone.13
+    100030: Bone.14
+    100032: Bone.15
+    100034: Bone.16
+    100036: Bone.17
+    100038: Bone.18
+    100040: Bone.19
+    100042: //RootNode
+    100044: Plane
+    100046: Arm.L
+    100048: Arm.R
+    100050: Foolt.L
+    100052: Foot.r.R
+    100054: Forearm.L
+    100056: Forearm.R
+    100058: Hand.L
+    100060: Hand.r.R
+    100062: Head
+    100064: Hip.L
+    100066: Hip.R
+    100068: Neck'
+    100070: Shin.L
+    100072: Shin.r.R
+    100074: Shoulder.L
+    100076: Shoulder.R
+    100078: Thigh.L
+    100080: Thigh.r.R
+    400000: Armature
+    400002: Bone.00
+    400004: Bone.01
+    400006: Bone.02
+    400008: Bone.03
+    400010: Bone.04
+    400012: Bone.05
+    400014: Bone.06
+    400016: Bone.07
+    400018: Bone.08
+    400020: Bone.09
+    400022: Bone.10
+    400024: Bone.11
+    400026: Bone.12
+    400028: Bone.13
+    400030: Bone.14
+    400032: Bone.15
+    400034: Bone.16
+    400036: Bone.17
+    400038: Bone.18
+    400040: Bone.19
+    400042: //RootNode
+    400044: Plane
+    400046: Arm.L
+    400048: Arm.R
+    400050: Foolt.L
+    400052: Foot.r.R
+    400054: Forearm.L
+    400056: Forearm.R
+    400058: Hand.L
+    400060: Hand.r.R
+    400062: Head
+    400064: Hip.L
+    400066: Hip.R
+    400068: Neck'
+    400070: Shin.L
+    400072: Shin.r.R
+    400074: Shoulder.L
+    400076: Shoulder.R
+    400078: Thigh.L
+    400080: Thigh.r.R
     4300000: Plane
     9500000: //RootNode
     13700000: Plane
@@ -71,7 +107,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
