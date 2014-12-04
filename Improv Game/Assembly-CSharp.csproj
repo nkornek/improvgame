@@ -84,11 +84,11 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="ZDK">
- <HintPath>C:/Users/Nick/Documents/SourceTree/improvGame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
- </Reference>
  <Reference Include="OpenNI.Net">
  <HintPath>C:/Users/Nick/Documents/SourceTree/improvGame/Improv Game/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ </Reference>
+ <Reference Include="ZDK">
+ <HintPath>C:/Users/Nick/Documents/SourceTree/improvGame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
