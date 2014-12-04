@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97ace90e94fede049a3f12f7efa48920
+guid: 060514fbf7ceec84abb85620f657d192
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -15,15 +15,16 @@ ModelImporter:
     100018: Hand.l
     100020: Hand.r
     100022: head
-    100024: Plane
-    100026: ppelvis
-    100028: Shin.L
-    100030: Shin.R
-    100032: Shulder.l
-    100034: Shulder.r
-    100036: Thigh.L
-    100038: Thigh.R
-    100040: tummy
+    100024: neck
+    100026: Plane
+    100028: ppelvis
+    100030: Shin.L
+    100032: Shin.R
+    100034: Shulder.l
+    100036: Shulder.r
+    100038: Thigh.L
+    100040: Thigh.R
+    100042: tummy
     400000: arm.L
     400002: arm.R
     400004: Armature
@@ -36,15 +37,16 @@ ModelImporter:
     400018: Hand.l
     400020: Hand.r
     400022: head
-    400024: Plane
-    400026: ppelvis
-    400028: Shin.L
-    400030: Shin.R
-    400032: Shulder.l
-    400034: Shulder.r
-    400036: Thigh.L
-    400038: Thigh.R
-    400040: tummy
+    400024: neck
+    400026: Plane
+    400028: ppelvis
+    400030: Shin.L
+    400032: Shin.R
+    400034: Shulder.l
+    400036: Shulder.r
+    400038: Thigh.L
+    400040: Thigh.R
+    400042: tummy
     4300000: Plane
     9500000: //RootNode
     13700000: Plane
