@@ -25,6 +25,19 @@ ModelImporter:
     100038: Thigh.L
     100040: Thigh.R
     100042: tummy
+    100044: Arm.l
+    100046: Arm.r
+    100048: Foot.l
+    100050: Foot.r
+    100052: hand.l
+    100054: hand.r
+    100056: pelvis
+    100058: Shin.l
+    100060: Shin.r
+    100062: Shoulder.l
+    100064: Shoulder.l.001
+    100066: Thigh.l
+    100068: Thigh.r
     400000: arm.L
     400002: arm.R
     400004: Armature
@@ -47,6 +60,19 @@ ModelImporter:
     400038: Thigh.L
     400040: Thigh.R
     400042: tummy
+    400044: Arm.l
+    400046: Arm.r
+    400048: Foot.l
+    400050: Foot.r
+    400052: hand.l
+    400054: hand.r
+    400056: pelvis
+    400058: Shin.l
+    400060: Shin.r
+    400062: Shoulder.l
+    400064: Shoulder.l.001
+    400066: Thigh.l
+    400068: Thigh.r
     4300000: Plane
     9500000: //RootNode
     13700000: Plane
