@@ -9,7 +9,7 @@ public class WriterControls : MonoBehaviour {
     public int playersWhoHaveActed;
 
 	PlayerIndex playerIndex;
-    int currentPlayer;
+    int currentPlayer, currentSelection;
     GamePadState state;
     GamePadState prevState;
 
@@ -61,8 +61,7 @@ public class WriterControls : MonoBehaviour {
             currentPlayer = randomInt;
             GamePad.SetVibration(playerIndex, 1, 1);
             Invoke("StopRumble", 0.3f);
-            playerHasActed[randomInt] = true;
-            
+            playerHasActed[randomInt] = true;          
         }
         else
         {

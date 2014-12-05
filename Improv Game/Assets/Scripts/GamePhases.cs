@@ -12,7 +12,7 @@ public class GamePhases : MonoBehaviour {
 	void Start () {
         gameState = GameState.writer;
         if (gameState == GameState.writer)
-        { 
+        {
 
         }
 	
