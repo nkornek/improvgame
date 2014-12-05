@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class ChoiceText : MonoBehaviour {
     public WriterControls writerScript;
 
+    public ActDatabase act;
+    public int actNum, sceneNum, choiceNum;
+
 	public Text[] choiceText;
-	public ChoiceDatabase choiceStrings;
 	public Text choiceDetails;
 	public string[] details, selection;
     public string blankSelection;
-    public int currentSelection, numberOfSelections, sceneNum;
-    public int[] NumberOfChoicesThisScene;
+    public int numberOfSelections;
 
     public bool canChoose;
 
@@ -25,14 +26,9 @@ public class ChoiceText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //display text and choices
-        details = new string[numberOfSelections];
-        selection = new string[numberOfSelections];
+        choiceDetails.text = "";
         for (int i = 0; i < numberOfSelections; i++)
         {
-            if (selection[i] == null)
-            {
-                selection[i] = blankSelection;
-            }
             choiceDetails.text += (details[i] + " " + selection[i] + " ");
         }
             
@@ -41,12 +37,23 @@ public class ChoiceText : MonoBehaviour {
 
 	public void SetText()
 	{
-		//set choices
-		for (int i = 0; i < choiceText.Length; i++)
-		{
-			//choiceText[i].text = choiceStrings.possiblechoices[i];
-		}
-		//set details
+        numberOfSelections = act.whichAct[actNum].whichScene[sceneNum].Choices.Length;
+        for (int i = 0; i < selection.Length; i++)
+        {
+            if (selection[i] == "")
+            {
+                selection[i] = blankSelection;
+            }
+        }
+        for (int i = 0; i < numberOfSelections; i++)
+        {
+            details[i] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choice[0];
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            //this is where code can be put to sort and randomize from a larger choice pool
+            choiceText[i].text = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[i];
+        }
 
         
 	}
@@ -55,11 +62,13 @@ public class ChoiceText : MonoBehaviour {
 	{
         if (canChoose)
         {
-            selection[currentSelection] = choiceText[choice].text;
+            selection[choiceNum] = choiceText[choice].text;
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
-            currentSelection++;
-            if (currentSelection > selection.Length)
+            choiceNum++;
+            if (choiceNum >= numberOfSelections)
             {
+                print("test");
+                choiceNum--;
                 canChoose = false;
 
                 //stuff to change to next phase
@@ -67,6 +76,7 @@ public class ChoiceText : MonoBehaviour {
             else
             {
                 writerScript.choosePlayer();
+                SetText();
             }
         }
 	}

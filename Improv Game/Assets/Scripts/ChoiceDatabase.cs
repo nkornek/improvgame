@@ -2,10 +2,15 @@
 using System.Collections;
 
 public class ChoiceDatabase : MonoBehaviour {
-    //for testing
-    public string[] locations, emotions, actions;
-    public string madeChoice;
-    public enum TypeOfChoice {location, emotion, action}
+
+    [System.Serializable]
+    public class class1
+    {
+        public string[] choice;
+    }
+
+    public class1[] Choices;
+    public class1[] Details;
    
 
 	// Use this for initialization
@@ -18,7 +23,7 @@ public class ChoiceDatabase : MonoBehaviour {
 	
 	}
 
-    public void MakeChoice(TypeOfChoice whichChoice)
+    public void MakeChoice()
     {
 
     }

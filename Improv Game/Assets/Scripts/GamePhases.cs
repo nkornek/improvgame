@@ -23,11 +23,4 @@ public class GamePhases : MonoBehaviour {
 	
 	}
 
-
-
-	void WriterChooses(int choiceNum)
-	{
-		gameState = GameState.writer;
-
-	}
 }
