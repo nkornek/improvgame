@@ -59,6 +59,7 @@ public class ChoiceText : MonoBehaviour {
         }
 
         //set base audio
+        directorVoices.numberOfSamples = numberOfSelections * 3;
         for (int i = 0; i < numberOfSelections; i++ )
         {
             //call out player number

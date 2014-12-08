@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\ActorControls.cs" />
      <Compile Include="Assets\DirectorVoice.cs" />
+     <Compile Include="Assets\SaveSkeleton.cs" />
      <Compile Include="Assets\Scripts\ActDatabase.cs" />
      <Compile Include="Assets\Scripts\ChoiceDatabase.cs" />
      <Compile Include="Assets\Scripts\ChoiceText.cs" />
