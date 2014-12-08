@@ -38,6 +38,100 @@ ModelImporter:
     100064: Shoulder.l.001
     100066: Thigh.l
     100068: Thigh.r
+    100070: Hands Skin
+    100072: Head
+    100074: HeadSkin
+    100076: HeadTop_End
+    100078: Hips
+    100080: Jaw
+    100082: JawEND
+    100084: LeftArm
+    100086: LeftCheek
+    100088: LeftEye
+    100090: LeftEyelidLower
+    100092: LeftEyelidUpper
+    100094: LeftFoot
+    100096: LeftFootToeBase_End
+    100098: LeftForeArm
+    100100: LeftHand
+    100102: LeftHandIndex1
+    100104: LeftHandIndex2
+    100106: LeftHandIndex3
+    100108: LeftHandIndex4
+    100110: LeftHandMiddle1
+    100112: LeftHandMiddle2
+    100114: LeftHandMiddle3
+    100116: LeftHandMiddle4
+    100118: LeftHandPinky1
+    100120: LeftHandPinky2
+    100122: LeftHandPinky3
+    100124: LeftHandPinky4
+    100126: LeftHandRing1
+    100128: LeftHandRing2
+    100130: LeftHandRing3
+    100132: LeftHandRing4
+    100134: LeftHandThumb1
+    100136: LeftHandThumb2
+    100138: LeftHandThumb3
+    100140: LeftHandThumb4
+    100142: LeftInnerBrow
+    100144: LeftIOuterBrow
+    100146: LeftLeg
+    100148: LeftLipCorner
+    100150: LeftLipLower
+    100152: LeftLipUpper
+    100154: LeftNostril
+    100156: LeftShoulder
+    100158: LeftToeBase
+    100160: LeftUpLeg
+    100162: Legskin
+    100164: Neck
+    100166: Neck1
+    100168: RightArm
+    100170: RightCheek
+    100172: RightEye
+    100174: RightEyelidLower
+    100176: RightEyelidUpper
+    100178: RightFoot
+    100180: RightFootToeBase_End
+    100182: RightForeArm
+    100184: RightHand
+    100186: RightHandIndex1
+    100188: RightHandIndex2
+    100190: RightHandIndex3
+    100192: RightHandIndex4
+    100194: RightHandMiddle1
+    100196: RightHandMiddle2
+    100198: RightHandMiddle3
+    100200: RightHandMiddle4
+    100202: RightHandPinky1
+    100204: RightHandPinky2
+    100206: RightHandPinky3
+    100208: RightHandPinky4
+    100210: RightHandRing1
+    100212: RightHandRing2
+    100214: RightHandRing3
+    100216: RightHandRing4
+    100218: RightHandThumb1
+    100220: RightHandThumb2
+    100222: RightHandThumb3
+    100224: RightHandThumb4
+    100226: RightInnerBrow
+    100228: RightIOuterBrow
+    100230: RightLeg
+    100232: RightLipCorner
+    100234: RightLipLower
+    100236: RightLipUpper
+    100238: RightNostril
+    100240: RightShoulder
+    100242: RightToeBase
+    100244: RightUpLeg
+    100246: Spine
+    100248: Spine1
+    100250: Spine2
+    100252: TongueBack
+    100254: TongueTip
+    100256: torsoskin
     400000: arm.L
     400002: arm.R
     400004: Armature
@@ -73,9 +167,113 @@ ModelImporter:
     400064: Shoulder.l.001
     400066: Thigh.l
     400068: Thigh.r
+    400070: Hands Skin
+    400072: Head
+    400074: HeadSkin
+    400076: HeadTop_End
+    400078: Hips
+    400080: Jaw
+    400082: JawEND
+    400084: LeftArm
+    400086: LeftCheek
+    400088: LeftEye
+    400090: LeftEyelidLower
+    400092: LeftEyelidUpper
+    400094: LeftFoot
+    400096: LeftFootToeBase_End
+    400098: LeftForeArm
+    400100: LeftHand
+    400102: LeftHandIndex1
+    400104: LeftHandIndex2
+    400106: LeftHandIndex3
+    400108: LeftHandIndex4
+    400110: LeftHandMiddle1
+    400112: LeftHandMiddle2
+    400114: LeftHandMiddle3
+    400116: LeftHandMiddle4
+    400118: LeftHandPinky1
+    400120: LeftHandPinky2
+    400122: LeftHandPinky3
+    400124: LeftHandPinky4
+    400126: LeftHandRing1
+    400128: LeftHandRing2
+    400130: LeftHandRing3
+    400132: LeftHandRing4
+    400134: LeftHandThumb1
+    400136: LeftHandThumb2
+    400138: LeftHandThumb3
+    400140: LeftHandThumb4
+    400142: LeftInnerBrow
+    400144: LeftIOuterBrow
+    400146: LeftLeg
+    400148: LeftLipCorner
+    400150: LeftLipLower
+    400152: LeftLipUpper
+    400154: LeftNostril
+    400156: LeftShoulder
+    400158: LeftToeBase
+    400160: LeftUpLeg
+    400162: Legskin
+    400164: Neck
+    400166: Neck1
+    400168: RightArm
+    400170: RightCheek
+    400172: RightEye
+    400174: RightEyelidLower
+    400176: RightEyelidUpper
+    400178: RightFoot
+    400180: RightFootToeBase_End
+    400182: RightForeArm
+    400184: RightHand
+    400186: RightHandIndex1
+    400188: RightHandIndex2
+    400190: RightHandIndex3
+    400192: RightHandIndex4
+    400194: RightHandMiddle1
+    400196: RightHandMiddle2
+    400198: RightHandMiddle3
+    400200: RightHandMiddle4
+    400202: RightHandPinky1
+    400204: RightHandPinky2
+    400206: RightHandPinky3
+    400208: RightHandPinky4
+    400210: RightHandRing1
+    400212: RightHandRing2
+    400214: RightHandRing3
+    400216: RightHandRing4
+    400218: RightHandThumb1
+    400220: RightHandThumb2
+    400222: RightHandThumb3
+    400224: RightHandThumb4
+    400226: RightInnerBrow
+    400228: RightIOuterBrow
+    400230: RightLeg
+    400232: RightLipCorner
+    400234: RightLipLower
+    400236: RightLipUpper
+    400238: RightNostril
+    400240: RightShoulder
+    400242: RightToeBase
+    400244: RightUpLeg
+    400246: Spine
+    400248: Spine1
+    400250: Spine2
+    400252: TongueBack
+    400254: TongueTip
+    400256: torsoskin
+    2300000: Hands Skin
+    2300002: Legskin
+    3300000: Hands Skin
+    3300002: Legskin
     4300000: Plane
+    4300002: Legskin
+    4300004: torsoskin
+    4300006: HeadSkin
+    4300008: Hands Skin
     9500000: //RootNode
     13700000: Plane
+    13700002: HeadSkin
+    13700004: torsoskin
   materials:
     importMaterials: 1
     materialName: 0
@@ -95,7 +293,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .100000001
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

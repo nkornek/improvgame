@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ChoiceText : MonoBehaviour {
     public WriterControls writerScript;
+    public GamePhases gamePhases;
+    public DirectorVoice directorVoices;
 
     public ActDatabase act;
     public int actNum, sceneNum, choiceNum;
@@ -48,12 +50,23 @@ public class ChoiceText : MonoBehaviour {
         for (int i = 0; i < numberOfSelections; i++)
         {
             details[i] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choice[0];
+
         }
         for (int i = 0; i < 4; i++)
         {
             //this is where code can be put to sort and randomize from a larger choice pool
             choiceText[i].text = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[i];
         }
+
+        //set base audio
+        for (int i = 0; i < numberOfSelections; i++ )
+        {
+            //call out player number
+            directorVoices.voiceSamples[i * 3] = act.whichAct[actNum].whichScene[sceneNum].Details[i].forPlayer;
+            //detail interstitials
+            directorVoices.voiceSamples[(i * 3) + 1] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choiceAudio[0];
+        }
+
 
         
 	}
@@ -63,15 +76,18 @@ public class ChoiceText : MonoBehaviour {
         if (canChoose)
         {
             selection[choiceNum] = choiceText[choice].text;
+            //set choice audio
+            directorVoices.voiceSamples[(choiceNum * 3) + 2] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[choice];
+
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
+            //////// put stuff to set audio and visual here
             choiceNum++;
             if (choiceNum >= numberOfSelections)
             {
                 print("test");
                 choiceNum--;
                 canChoose = false;
-
-                //stuff to change to next phase
+                gamePhases.Invoke("ToDirector", 1);
             }
             else
             {
@@ -80,6 +96,5 @@ public class ChoiceText : MonoBehaviour {
             }
         }
 	}
-
 
 }

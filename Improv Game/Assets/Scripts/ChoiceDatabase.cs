@@ -7,6 +7,8 @@ public class ChoiceDatabase : MonoBehaviour {
     public class class1
     {
         public string[] choice;
+        public AudioClip forPlayer;
+        public AudioClip[] choiceAudio;
     }
 
     public class1[] Choices;
