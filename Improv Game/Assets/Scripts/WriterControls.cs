@@ -8,6 +8,8 @@ public class WriterControls : MonoBehaviour {
     public bool[] playerHasActed;
     public int playersWhoHaveActed;
 
+
+
 	PlayerIndex playerIndex;
     int currentPlayer, currentSelection;
     GamePadState state;
@@ -20,17 +22,22 @@ public class WriterControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+	}
 
+    public void WritersTurn()
+    {
         prevState = state;
         state = GamePad.GetState(playerIndex);
+
+
         //debug
         if (Input.GetKeyDown(KeyCode.V) & controllerMaster.playersInGame > 0)
         {
             choosePlayer();
         }
-        playerControls();
-	
-	}
+        playerControls();    
+    }
 	
 	public void choosePlayer()
 	{

@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ActorControls.cs" />
+     <Compile Include="Assets\DirectorVoice.cs" />
      <Compile Include="Assets\Scripts\ActDatabase.cs" />
      <Compile Include="Assets\Scripts\ChoiceDatabase.cs" />
      <Compile Include="Assets\Scripts\ChoiceText.cs" />
      <Compile Include="Assets\Scripts\GamePhases.cs" />
      <Compile Include="Assets\Scripts\GetControllers.cs" />
+     <Compile Include="Assets\Scripts\LobbyControl.cs" />
      <Compile Include="Assets\Scripts\PlayerLobbyDancer.cs" />
      <Compile Include="Assets\Scripts\SceneDatabase.cs" />
      <Compile Include="Assets\Scripts\WriterControls.cs" />
