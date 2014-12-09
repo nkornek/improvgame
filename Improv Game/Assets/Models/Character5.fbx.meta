@@ -132,6 +132,30 @@ ModelImporter:
     100252: TongueBack
     100254: TongueTip
     100256: torsoskin
+    100258: Armature.001
+    100260: hips
+    100262: leftarm
+    100264: leftfoot
+    100266: leftfoottoebase
+    100268: leftforearm
+    100270: lefthand
+    100272: leftleg
+    100274: leftshoulder
+    100276: lefttoebase
+    100278: leftupleg
+    100280: neck1
+    100282: person
+    100284: rightarm
+    100286: rightfoot
+    100288: rightfoottoebase
+    100290: rightforearm
+    100292: righthand
+    100294: rightleg
+    100296: rightshoulder
+    100298: righttoebase
+    100300: Rightupleg
+    100302: spine
+    100304: spine1
     400000: arm.L
     400002: arm.R
     400004: Armature
@@ -261,6 +285,30 @@ ModelImporter:
     400252: TongueBack
     400254: TongueTip
     400256: torsoskin
+    400258: Armature.001
+    400260: hips
+    400262: leftarm
+    400264: leftfoot
+    400266: leftfoottoebase
+    400268: leftforearm
+    400270: lefthand
+    400272: leftleg
+    400274: leftshoulder
+    400276: lefttoebase
+    400278: leftupleg
+    400280: neck1
+    400282: person
+    400284: rightarm
+    400286: rightfoot
+    400288: rightfoottoebase
+    400290: rightforearm
+    400292: righthand
+    400294: rightleg
+    400296: rightshoulder
+    400298: righttoebase
+    400300: Rightupleg
+    400302: spine
+    400304: spine1
     2300000: Hands Skin
     2300002: Legskin
     3300000: Hands Skin
@@ -270,10 +318,12 @@ ModelImporter:
     4300004: torsoskin
     4300006: HeadSkin
     4300008: Hands Skin
+    4300010: person
     9500000: //RootNode
     13700000: Plane
     13700002: HeadSkin
     13700004: torsoskin
+    13700006: person
   materials:
     importMaterials: 1
     materialName: 0
@@ -293,7 +343,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .100000001
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
