@@ -9,6 +9,8 @@ public class SaveSkeleton : MonoBehaviour {
     public int act, scene, player;
     public bool canClone;
 
+    public Transform handAttach, headAttach;
+
 
 
 	// Use this for initialization

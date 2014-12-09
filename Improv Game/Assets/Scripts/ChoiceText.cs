@@ -52,9 +52,24 @@ public class ChoiceText : MonoBehaviour {
             details[i] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choice[0];
 
         }
+
+        //randomize choices
+        for (int t = 0; t < act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice.Length; t++)
+        {
+            string tmpString = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[t];
+            AudioClip tmpChoiceAudio = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[t];
+            GameObject tmpProp = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[t];
+            int r = Random.Range(t, act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice.Length);
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[r] = tmpString;
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[r] = tmpChoiceAudio;
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[r] = tmpProp;
+        }
+
         for (int i = 0; i < 4; i++)
         {
-            //this is where code can be put to sort and randomize from a larger choice pool
             choiceText[i].text = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[i];
         }
 
@@ -80,6 +95,10 @@ public class ChoiceText : MonoBehaviour {
             //set choice audio
             directorVoices.voiceSamples[(choiceNum * 3) + 2] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[choice];
 
+            //spawn Prop
+            GameObject newProp;
+            newProp = Instantiate(act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[choice]) as GameObject;
+            newProp.GetComponent<PropScript>().playerNum = act.whichAct[actNum].whichScene[sceneNum].Details[choiceNum].whichPlayer;
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
             //////// put stuff to set audio and visual here
             choiceNum++;
