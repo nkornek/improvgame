@@ -9,6 +9,8 @@ Project("{1B8BCD44-8977-C299-B408-B8C3739718E7}") = "Improv Game", "Assembly-CSh
 EndProject
 Project("{1B8BCD44-8977-C299-B408-B8C3739718E7}") = "Improv Game", "Assembly-UnityScript-firstpass.unityproj", "{6FC38325-25EA-58E6-49B4-63A8AF674915}"
 EndProject
+Project("{1B8BCD44-8977-C299-B408-B8C3739718E7}") = "Improv Game", "Assembly-UnityScript-Editor.unityproj", "{6C036689-48A9-95A3-1DB0-6AF9119C6E61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +33,15 @@ Global
 		{6FC38325-25EA-58E6-49B4-63A8AF674915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC38325-25EA-58E6-49B4-63A8AF674915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC38325-25EA-58E6-49B4-63A8AF674915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C036689-48A9-95A3-1DB0-6AF9119C6E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C036689-48A9-95A3-1DB0-6AF9119C6E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C036689-48A9-95A3-1DB0-6AF9119C6E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C036689-48A9-95A3-1DB0-6AF9119C6E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																										GlobalSection(MonoDevelopProperties) = preSolution
+																																																												GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
