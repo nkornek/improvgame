@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ChoiceText : MonoBehaviour {
     public WriterControls writerScript;
+    public GamePhases gamePhases;
+    public DirectorVoice directorVoices;
 
     public ActDatabase act;
     public int actNum, sceneNum, choiceNum;
@@ -48,12 +50,39 @@ public class ChoiceText : MonoBehaviour {
         for (int i = 0; i < numberOfSelections; i++)
         {
             details[i] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choice[0];
+
         }
+
+        //randomize choices
+        for (int t = 0; t < act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice.Length; t++)
+        {
+            string tmpString = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[t];
+            AudioClip tmpChoiceAudio = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[t];
+            GameObject tmpProp = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[t];
+            int r = Random.Range(t, act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice.Length);
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[t] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[r];
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[r] = tmpString;
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[r] = tmpChoiceAudio;
+            act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[r] = tmpProp;
+        }
+
         for (int i = 0; i < 4; i++)
         {
-            //this is where code can be put to sort and randomize from a larger choice pool
             choiceText[i].text = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choice[i];
         }
+
+        //set base audio
+        directorVoices.numberOfSamples = numberOfSelections * 3;
+        for (int i = 0; i < numberOfSelections; i++ )
+        {
+            //call out player number
+            directorVoices.voiceSamples[i * 3] = act.whichAct[actNum].whichScene[sceneNum].Details[i].forPlayer;
+            //detail interstitials
+            directorVoices.voiceSamples[(i * 3) + 1] = act.whichAct[actNum].whichScene[sceneNum].Details[i].choiceAudio[0];
+        }
+
 
         
 	}
@@ -63,15 +92,22 @@ public class ChoiceText : MonoBehaviour {
         if (canChoose)
         {
             selection[choiceNum] = choiceText[choice].text;
+            //set choice audio
+            directorVoices.voiceSamples[(choiceNum * 3) + 2] = act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].choiceAudio[choice];
+
+            //spawn Prop
+            GameObject newProp;
+            newProp = Instantiate(act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[choice]) as GameObject;
+            newProp.GetComponent<PropScript>().playerNum = act.whichAct[actNum].whichScene[sceneNum].Details[choiceNum].whichPlayer;
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
+            //////// put stuff to set audio and visual here
             choiceNum++;
             if (choiceNum >= numberOfSelections)
             {
                 print("test");
                 choiceNum--;
                 canChoose = false;
-
-                //stuff to change to next phase
+                gamePhases.Invoke("ToDirector", 1);
             }
             else
             {
@@ -80,6 +116,5 @@ public class ChoiceText : MonoBehaviour {
             }
         }
 	}
-
 
 }

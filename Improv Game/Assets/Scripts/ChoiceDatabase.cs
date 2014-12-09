@@ -7,6 +7,10 @@ public class ChoiceDatabase : MonoBehaviour {
     public class class1
     {
         public string[] choice;
+        public AudioClip forPlayer;
+        public int whichPlayer;
+        public AudioClip[] choiceAudio;
+        public GameObject[] prop;
     }
 
     public class1[] Choices;
