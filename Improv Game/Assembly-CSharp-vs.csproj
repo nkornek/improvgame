@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ActorControls.cs" />
+     <Compile Include="Assets\CameraAnimationTriggers.cs" />
+     <Compile Include="Assets\CurtainCarryOver.cs" />
      <Compile Include="Assets\DirectorVoice.cs" />
      <Compile Include="Assets\PBL\Script\ColorPicker.cs" />
      <Compile Include="Assets\PBL\Script\HUD.cs" />

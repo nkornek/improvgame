@@ -29,6 +29,11 @@ public class GetControllers : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //debug
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            GameObject.Find("Main Camera").GetComponent<Animator>().SetTrigger("StartLoad");
+        }
         //hide disconnection UI
         disconnectUI[0].enabled = false;
         disconnectUI[1].enabled = false;
