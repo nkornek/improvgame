@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\ActorControls.cs" />
      <Compile Include="Assets\DirectorVoice.cs" />
+     <Compile Include="Assets\PBL\Script\ColorPicker.cs" />
+     <Compile Include="Assets\PBL\Script\HUD.cs" />
      <Compile Include="Assets\PropScript.cs" />
      <Compile Include="Assets\SaveSkeleton.cs" />
      <Compile Include="Assets\Scripts\ActDatabase.cs" />
@@ -117,6 +119,8 @@
      <None Include="Assets\XInputDotNet\MITLicense.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\PBL\Shaders\PBL.shader" />
+     <None Include="Assets\PBL\Shaders\PBLA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
@@ -124,6 +128,7 @@
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\PBL\Shaders\PBLT.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
