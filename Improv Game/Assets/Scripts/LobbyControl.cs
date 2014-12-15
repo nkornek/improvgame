@@ -15,10 +15,14 @@ public class LobbyControl : MonoBehaviour {
 
     public float timer, maxtime;
     public bool gameStarting;
+
+    public Animator camera;
+
 	// Use this for initialization
 	void Start () {
         timer = maxtime;
-	
+        controllerScript = GameObject.Find("Controllers").GetComponent<GetControllers>();
+
 	}
 	
 	// Update is called once per frame
@@ -63,6 +67,7 @@ public class LobbyControl : MonoBehaviour {
             UItext[3].text = Mathf.FloorToInt(timer).ToString();
             if (timer <= 0.1f)
             {
+                timer = 0;
                 StartGame();
             }
 
@@ -85,6 +90,6 @@ public class LobbyControl : MonoBehaviour {
 
     void StartGame()
     {
-        Application.LoadLevel(1);
+        camera.SetTrigger("StartLoad");
     }
 }

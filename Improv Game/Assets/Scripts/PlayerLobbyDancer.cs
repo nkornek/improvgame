@@ -13,6 +13,7 @@ public class PlayerLobbyDancer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         startPos = transform.position;
+        controllerScript = GameObject.Find("Controllers").GetComponent<GetControllers>();
 	
 	}
 	

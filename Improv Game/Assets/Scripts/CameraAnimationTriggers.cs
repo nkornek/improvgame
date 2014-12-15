@@ -4,6 +4,11 @@ using System.Collections;
 public class CameraAnimationTriggers : MonoBehaviour {
     public Animator Curtains;
 
+    void Start()
+    {
+        Curtains = GameObject.Find("Curtains").GetComponent<Animator>();
+    }
+
 
     void CloseCurtains()
     {
@@ -12,7 +17,7 @@ public class CameraAnimationTriggers : MonoBehaviour {
 
     void StartGame()
     {
-        Application.LoadLevelAsync(1);
+        Application.LoadLevelAsync(2);
     }
 
 }

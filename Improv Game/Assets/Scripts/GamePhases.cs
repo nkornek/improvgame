@@ -25,8 +25,9 @@ public class GamePhases : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameState = GameState.writer;
-		curtains = GameObject.Find ("Curtains").GetComponent<Animator> ();
+        curtains = GameObject.Find("Curtains").GetComponent<Animator>();
+        ShowWriterUI();
+        
 	
 	}
 	

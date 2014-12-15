@@ -49,6 +49,7 @@
      <Compile Include="Assets\Moneyenabled.cs" />
      <Compile Include="Assets\PBL\Script\ColorPicker.cs" />
      <Compile Include="Assets\PBL\Script\HUD.cs" />
+     <Compile Include="Assets\STARTTHISGAMEGUY.cs" />
      <Compile Include="Assets\SaveString.cs" />
      <Compile Include="Assets\Scripts\ActDatabase.cs" />
      <Compile Include="Assets\Scripts\ActorControls.cs" />
