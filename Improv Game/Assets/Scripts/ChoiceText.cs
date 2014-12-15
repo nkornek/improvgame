@@ -99,6 +99,7 @@ public class ChoiceText : MonoBehaviour {
             GameObject newProp;
             newProp = Instantiate(act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[choice]) as GameObject;
             newProp.GetComponent<PropScript>().playerNum = act.whichAct[actNum].whichScene[sceneNum].Details[choiceNum].whichPlayer;
+			newProp.GetComponent<PropScript>().SetProp();
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
             //////// put stuff to set audio and visual here
             choiceNum++;
