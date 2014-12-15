@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PropScript : MonoBehaviour {
 
-    public enum PropTypes {held, background, foreground, clothesHat, Head}
+    public enum PropTypes {held, background, foreground, clothesHat, Head, heldLeft}
     public PropTypes propType;
 
     public int playerNum;
@@ -25,14 +25,53 @@ public class PropScript : MonoBehaviour {
 		switch (propType)
 		{
 		case PropTypes.held:
-			foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+			if (playerNum != 0)
 			{
-				if (g.GetComponent<SaveSkeleton>().player == playerNum)
+				foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
 				{
-					transform.parent = g.GetComponent<SaveSkeleton>().handAttach.transform;
-					transform.position = transform.parent.position;
-					transform.rotation = transform.parent.rotation;
+					if (g.GetComponent<SaveSkeleton>().player == playerNum)
+					{
+						transform.parent = g.GetComponent<SaveSkeleton>().handAttach.transform;
+						transform.position = transform.parent.position;
+						transform.rotation = transform.parent.rotation;
+					}
 				}
+			}
+			else
+			{
+				if (playerNum == 3)
+				{
+					propType = PropTypes.heldLeft;
+				}
+				GameObject cloneProp;
+				cloneProp = Instantiate(gameObject) as GameObject;
+				cloneProp.GetComponent<PropScript>().playerNum = 1;
+				cloneProp.GetComponent<PropScript>().SetProp();
+				playerNum = 2;
+				SetProp();
+			}
+			break;
+		case PropTypes.heldLeft:
+			if (playerNum != 0)
+			{
+				foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+				{
+					if (g.GetComponent<SaveSkeleton>().player == playerNum)
+					{
+						transform.parent = g.GetComponent<SaveSkeleton>().leftHandAttach.transform;
+						transform.position = transform.parent.position;
+						transform.rotation = transform.parent.rotation;
+					}
+				}
+			}
+			else
+			{
+				GameObject cloneProp;
+				cloneProp = Instantiate(gameObject) as GameObject;
+				cloneProp.GetComponent<PropScript>().playerNum = 1;
+				cloneProp.GetComponent<PropScript>().SetProp();
+				playerNum = 2;
+				SetProp();
 			}
 			break;
 		case PropTypes.background:
