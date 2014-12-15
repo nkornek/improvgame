@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PropScript : MonoBehaviour {
 
-    public enum PropTypes {held, background, foreground, clothesHat}
+    public enum PropTypes {held, background, foreground, clothesHat, Head}
     public PropTypes propType;
 
     public int playerNum;
@@ -38,8 +38,40 @@ public class PropScript : MonoBehaviour {
 		case PropTypes.background:
 			transform.parent = GameObject.Find("Background Parent").transform;
 			transform.position = transform.parent.position;
+			transform.parent.GetComponent<Storage>().StoreBackground(gameObject.GetComponent<SpriteRenderer>());
 			break;
 		case PropTypes.foreground:
+			transform.parent = GameObject.Find("Foreground Parent").transform;
+			transform.position = transform.parent.position;
+			transform.parent.GetComponent<Storage>().StoreBackground(gameObject.GetComponent<SpriteRenderer>());
+			break;
+		case PropTypes.clothesHat:
+			foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+			{
+				if (g.GetComponent<SaveSkeleton>().player == playerNum)
+				{
+					//hat
+					gameObject.GetComponent<ClothesAndHat>().hat.transform.parent = g.GetComponent<SaveSkeleton>().headAttach.transform;
+					gameObject.GetComponent<ClothesAndHat>().hat.transform.position = gameObject.GetComponent<ClothesAndHat>().hat.transform.parent.position;
+					gameObject.GetComponent<ClothesAndHat>().hat.transform.rotation = gameObject.GetComponent<ClothesAndHat>().hat.transform.parent.rotation;
+
+					//clothes
+					gameObject.GetComponent<ClothesAndHat>().clothes.transform.parent = g.GetComponent<SaveSkeleton>().bodyAttach.transform;
+					gameObject.GetComponent<ClothesAndHat>().clothes.transform.position = gameObject.GetComponent<ClothesAndHat>().clothes.transform.parent.position; 
+					gameObject.GetComponent<ClothesAndHat>().clothes.transform.rotation = gameObject.GetComponent<ClothesAndHat>().clothes.transform.parent.rotation; 
+				}
+			}
+			break;
+		case PropTypes.Head:
+			foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+			{
+				if (g.GetComponent<SaveSkeleton>().player == playerNum)
+				{
+					transform.parent = g.GetComponent<SaveSkeleton>().headAttach.transform;
+					transform.position = transform.parent.position;
+					transform.rotation = transform.parent.rotation;
+				}
+			}
 			break;
 		}
 	}

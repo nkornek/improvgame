@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\ActorControls.cs" />
      <Compile Include="Assets\CameraAnimationTriggers.cs" />
+     <Compile Include="Assets\ClothesAndHat.cs" />
      <Compile Include="Assets\CurtainCarryOver.cs" />
      <Compile Include="Assets\DirectorVoice.cs" />
      <Compile Include="Assets\PBL\Script\ColorPicker.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\PlayerLobbyDancer.cs" />
      <Compile Include="Assets\Scripts\SceneDatabase.cs" />
      <Compile Include="Assets\Scripts\WriterControls.cs" />
+     <Compile Include="Assets\Storage.cs" />
      <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\ExitOnEscape.cs" />
      <Compile Include="Assets\ZigFu\SampleScenes\_Data\Scripts\HSBColor.cs" />
