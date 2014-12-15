@@ -144,10 +144,10 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>D:/Users/Nick/Documents/SourceTree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>C:/Users/CriticalHit/Documents/Sourcetree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>D:/Users/Nick/Documents/SourceTree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>C:/Users/CriticalHit/Documents/Sourcetree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

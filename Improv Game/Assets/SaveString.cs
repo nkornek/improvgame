@@ -26,8 +26,7 @@ public class SaveString : MonoBehaviour {
 		{
 			whichString = 0;
 			//stuff to end game goes here
-
-
+            choiceScript.gamePhases.gameOver = true;
 		}
 	}
 }

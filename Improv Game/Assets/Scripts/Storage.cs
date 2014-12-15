@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Storage : MonoBehaviour {
-	public SpriteRenderer[] stored;
+	public GameObject[] stored;
 	public int currentStored;
 
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class Storage : MonoBehaviour {
 	
 	}
 
-	public void StoreBackground (SpriteRenderer background)
+	public void StoreBackground (GameObject background)
 	{
 		stored [currentStored] = background;
 		currentStored ++;
@@ -27,7 +27,18 @@ public class Storage : MonoBehaviour {
 		{
 			if (stored[i])
 			{
-				stored[i].enabled = false;
+                if (stored[i].GetComponent<SpriteRenderer>())
+                {
+                    stored[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
+                else
+                {
+                    foreach (Light l in stored[i].GetComponentsInChildren<Light>())
+                    {
+                        l.enabled = false;
+                    }
+                }
+				
 			}
 		}
 	}

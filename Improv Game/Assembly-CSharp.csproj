@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Moneyenabled.cs" />
      <Compile Include="Assets\PBL\Script\ColorPicker.cs" />
      <Compile Include="Assets\PBL\Script\HUD.cs" />
      <Compile Include="Assets\SaveString.cs" />
@@ -179,10 +180,10 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="OpenNI.Net">
- <HintPath>D:/Users/Nick/Documents/SourceTree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
+ <HintPath>C:/Users/CriticalHit/Documents/Sourcetree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/OpenNI.Net.dll</HintPath>
  </Reference>
  <Reference Include="ZDK">
- <HintPath>D:/Users/Nick/Documents/SourceTree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
+ <HintPath>C:/Users/CriticalHit/Documents/Sourcetree/improvgame/Improv Game/Assets/ZigFu/Scripts/_Internal/ZDK.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

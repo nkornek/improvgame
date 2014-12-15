@@ -18,6 +18,9 @@ public class GamePhases : MonoBehaviour {
 
 	public SaveSkeleton player1, player2;
 	public ChoiceText choiceScript;
+    public SaveString strings;
+
+    public bool gameOver;
 
 
 	// Use this for initialization
@@ -104,11 +107,66 @@ public class GamePhases : MonoBehaviour {
 		director.directorTalk.Play ();
 	}
 
-	public void startrecall()
+	public void StartRecall()
 	{
+        CancelInvoke("ToWriters");
+        curtains.SetTrigger("Close");
+        gameState = GameState.recall;
 		int randomInt = Random.Range (0, director.review.Length);
 		director.directorTalk.clip = director.review[randomInt];
 		director.directorTalk.Play ();
+        Invoke("RecallSomething", director.directorTalk.clip.length);
+
+        //hide kinect characters
+        foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            foreach (MeshRenderer m in g.GetComponentsInChildren<MeshRenderer>())
+            {
+                m.enabled = false;
+            }
+            foreach (SpriteRenderer m in g.GetComponentsInChildren<SpriteRenderer>())
+            {
+                m.enabled = false;
+            }
+        }
+
 	}
+
+    public void RecallSomething()
+    {
+        strings.recallString();
+        choiceScript.recallStuff();
+        curtains.SetTrigger("Open");
+        Invoke("StopRecall", 10);
+    }
+
+    public void StopRecall()
+    {
+        curtains.SetTrigger("Close");
+        if (!gameOver)
+        {
+            Invoke("RecallSomething", 4);
+        }
+        else
+        {
+            Invoke("EndRecalling", 4);
+        }
+        
+    }
+
+    public void EndRecalling()
+    {
+        CancelInvoke("RecallSomething");
+        CancelInvoke("StopRecall");
+        int randomInt = Random.Range(0, director.wrap.Length);
+        director.directorTalk.clip = director.wrap[randomInt];
+        director.directorTalk.Play();
+        Invoke("LoadMenu", director.directorTalk.clip.length + 2);
+    }
+
+    public void LoadMenu()
+    {
+        Application.LoadLevel(1);
+    }
 
 }

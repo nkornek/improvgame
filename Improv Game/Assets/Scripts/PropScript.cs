@@ -77,12 +77,12 @@ public class PropScript : MonoBehaviour {
 		case PropTypes.background:
 			transform.parent = GameObject.Find("Background Parent").transform;
 			transform.position = transform.parent.position;
-			transform.parent.GetComponent<Storage>().StoreBackground(gameObject.GetComponent<SpriteRenderer>());
+			transform.parent.GetComponent<Storage>().StoreBackground(gameObject);
 			break;
 		case PropTypes.foreground:
 			transform.parent = GameObject.Find("Foreground Parent").transform;
 			transform.position = transform.parent.position;
-			transform.parent.GetComponent<Storage>().StoreBackground(gameObject.GetComponent<SpriteRenderer>());
+			transform.parent.GetComponent<Storage>().StoreBackground(gameObject);
 			break;
 		case PropTypes.clothesHat:
 			foreach (GameObject g in GameObject.FindGameObjectsWithTag("Player"))

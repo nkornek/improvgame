@@ -14,7 +14,7 @@ public class DirectorVoice : MonoBehaviour {
 
 	public AudioClip[] hmms, setup, toActors;
 
-	public AudioClip[] review;
+	public AudioClip[] review, wrap;
 
 	// Use this for initialization
 	void Start () {

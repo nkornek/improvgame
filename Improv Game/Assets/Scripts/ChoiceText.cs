@@ -156,11 +156,7 @@ public class ChoiceText : MonoBehaviour {
 		{
 			actNum = 0;
 			//go to final replay
-			gamePhases.startrecall();
-		}
-		else if (gamePhases.gameState == GamePhases.GameState.recall)
-		{
-			Invoke("recallStuff", 5);
+			gamePhases.StartRecall();
 		}
 	}
 
@@ -169,55 +165,103 @@ public class ChoiceText : MonoBehaviour {
 	{
 		for (int i=0; i < bg.stored.Length; i++)
 		{
-			if (bg.stored[i].GetComponent<PropScript>().act == actNum 
-			    & bg.stored[i].GetComponent<PropScript>().scene == sceneNum)
-			{
-				bg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
-			}
-			else
-			{
-				bg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
-			}
+            if (fg.stored[i])
+            {
+                if (fg.stored[i].GetComponent<PropScript>().act == actNum)
+                {
+                    fg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
+                }
+                else
+                {
+                    fg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
+                }
+            }
 		}
-		for (int i=0; i < fg.stored.Length; i++)
+		for (int i=0; i < bg.stored.Length; i++)
 		{
-			if (fg.stored[i].GetComponent<PropScript>().act == actNum 
-			    & fg.stored[i].GetComponent<PropScript>().scene == sceneNum)
-			{
-				fg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
-			}
-			else
-			{
-				fg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
-			}
+            if (bg.stored[i])
+            {
+                if (bg.stored[i].GetComponent<PropScript>().act == actNum)
+                {
+                    if (bg.stored[i].GetComponent<SpriteRenderer>())
+                    {
+                        bg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                    else
+                    {
+                        foreach (Light l in bg.stored[i].GetComponentsInChildren<Light>())
+                        {
+                            l.enabled = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (bg.stored[i].GetComponent<SpriteRenderer>())
+                    {
+                        bg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
+                    }
+                    else
+                    {
+                        foreach (Light l in bg.stored[i].GetComponentsInChildren<Light>())
+                        {
+                            l.enabled = false;
+                        }
+                    }
+                }
+            }
 		}
 		for (int i=0; i < skeleton1.storage.Length; i++)
 		{
 			if (skeleton1.storage[i].GetComponent<SaveSkeleton>().act == actNum 
 			    & skeleton1.storage[i].GetComponent<SaveSkeleton>().scene == sceneNum)
 			{
-				skeleton1.storage[i].GetComponent<MeshRenderer>().enabled = true;
-				skeleton1.storage[i].GetComponent<SpriteRenderer>().enabled = true;
+                foreach(MeshRenderer m in skeleton1.storage[i].GetComponentsInChildren<MeshRenderer>())
+                {
+                    m.enabled = true;
+                }
+                foreach (SpriteRenderer s in skeleton1.storage[i].GetComponentsInChildren<SpriteRenderer>())
+                {
+                    s.enabled = true;
+                }
 			}
 			else
 			{
-				skeleton1.storage[i].GetComponent<MeshRenderer>().enabled = false;
-				skeleton1.storage[i].GetComponent<SpriteRenderer>().enabled = false;
+                foreach (MeshRenderer m in skeleton1.storage[i].GetComponentsInChildren<MeshRenderer>())
+                {
+                    m.enabled = false;
+                }
+                foreach (SpriteRenderer s in skeleton1.storage[i].GetComponentsInChildren<SpriteRenderer>())
+                {
+                    s.enabled = false;
+                }
 			}
 		}
 		for (int i=0; i < skeleton2.storage.Length; i++)
 		{
-			if (skeleton2.storage[i].GetComponent<SaveSkeleton>().act == actNum 
-			    & skeleton2.storage[i].GetComponent<SaveSkeleton>().scene == sceneNum)
-			{
-				skeleton2.storage[i].GetComponent<MeshRenderer>().enabled = true;
-				skeleton2.storage[i].GetComponent<SpriteRenderer>().enabled = true;
-			}
-			else
-			{
-				skeleton2.storage[i].GetComponent<MeshRenderer>().enabled = false;
-				skeleton2.storage[i].GetComponent<SpriteRenderer>().enabled = false;
-			}
+            if (skeleton1.storage[i].GetComponent<SaveSkeleton>().act == actNum
+                & skeleton1.storage[i].GetComponent<SaveSkeleton>().scene == sceneNum)
+            {
+                foreach (MeshRenderer m in skeleton2.storage[i].GetComponentsInChildren<MeshRenderer>())
+                {
+                    m.enabled = true;
+                }
+                foreach (SpriteRenderer s in skeleton2.storage[i].GetComponentsInChildren<SpriteRenderer>())
+                {
+                    s.enabled = true;
+                }
+            }
+            else
+            {
+                foreach (MeshRenderer m in skeleton2.storage[i].GetComponentsInChildren<MeshRenderer>())
+                {
+                    m.enabled = false;
+                }
+                foreach (SpriteRenderer s in skeleton2.storage[i].GetComponentsInChildren<SpriteRenderer>())
+                {
+                    s.enabled = false;
+                }
+            }
 		}
 		NextScene ();
 
