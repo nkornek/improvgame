@@ -16,8 +16,12 @@ public class ChoiceText : MonoBehaviour {
 	public string[] details, selection;
     public string blankSelection;
     public int numberOfSelections;
+	public SaveString stringSaver;
 
     public bool canChoose;
+
+	public Storage bg, fg;
+	public TriggerSave skeleton1, skeleton2;
 
 	// Use this for initialization
 	void Start () {
@@ -99,23 +103,124 @@ public class ChoiceText : MonoBehaviour {
             GameObject newProp;
             newProp = Instantiate(act.whichAct[actNum].whichScene[sceneNum].Choices[choiceNum].prop[choice]) as GameObject;
             newProp.GetComponent<PropScript>().playerNum = act.whichAct[actNum].whichScene[sceneNum].Details[choiceNum].whichPlayer;
+			newProp.GetComponent<PropScript>().act = actNum;
+			newProp.GetComponent<PropScript>().scene = sceneNum;
 			newProp.GetComponent<PropScript>().SetProp();
             choiceDetails.text = details[0] + " " + selection[0] + " " + details[1] + " " + selection[1];
             //////// put stuff to set audio and visual here
             choiceNum++;
             if (choiceNum >= numberOfSelections)
             {
-                print("test");
-                choiceNum--;
+				//go to next step
+                choiceNum = 0;
                 canChoose = false;
+				stringSaver.saveString();
                 gamePhases.Invoke("ToDirector", 1);
             }
             else
             {
                 writerScript.choosePlayer();
                 SetText();
+				gamePhases.hmm();
             }
         }
+	}
+
+	public void NextScene()
+	{
+		sceneNum++;
+		if (sceneNum >= act.whichAct[actNum].whichScene.Length)
+		{
+			sceneNum = 0;
+			NextAct();
+		}
+		else if (gamePhases.gameState == GamePhases.GameState.recall)
+		{
+			Invoke("recallStuff", 5);
+		}
+	}
+
+	public void HideStuff()
+	{
+		bg.HideBackground ();
+		fg.HideBackground ();
+		gamePhases.player1.RemoveProps ();
+		gamePhases.player2.RemoveProps ();
+	}
+
+	public void NextAct()
+	{
+		HideStuff ();
+		actNum++;
+		if (actNum >= act.whichAct.Length)
+		{
+			actNum = 0;
+			//go to final replay
+			gamePhases.startrecall();
+		}
+		else if (gamePhases.gameState == GamePhases.GameState.recall)
+		{
+			Invoke("recallStuff", 5);
+		}
+	}
+
+	
+	public void recallStuff()
+	{
+		for (int i=0; i < bg.stored.Length; i++)
+		{
+			if (bg.stored[i].GetComponent<PropScript>().act == actNum 
+			    & bg.stored[i].GetComponent<PropScript>().scene == sceneNum)
+			{
+				bg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
+			else
+			{
+				bg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
+			}
+		}
+		for (int i=0; i < fg.stored.Length; i++)
+		{
+			if (fg.stored[i].GetComponent<PropScript>().act == actNum 
+			    & fg.stored[i].GetComponent<PropScript>().scene == sceneNum)
+			{
+				fg.stored[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
+			else
+			{
+				fg.stored[i].GetComponent<SpriteRenderer>().enabled = false;
+			}
+		}
+		for (int i=0; i < skeleton1.storage.Length; i++)
+		{
+			if (skeleton1.storage[i].GetComponent<SaveSkeleton>().act == actNum 
+			    & skeleton1.storage[i].GetComponent<SaveSkeleton>().scene == sceneNum)
+			{
+				skeleton1.storage[i].GetComponent<MeshRenderer>().enabled = true;
+				skeleton1.storage[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
+			else
+			{
+				skeleton1.storage[i].GetComponent<MeshRenderer>().enabled = false;
+				skeleton1.storage[i].GetComponent<SpriteRenderer>().enabled = false;
+			}
+		}
+		for (int i=0; i < skeleton2.storage.Length; i++)
+		{
+			if (skeleton2.storage[i].GetComponent<SaveSkeleton>().act == actNum 
+			    & skeleton2.storage[i].GetComponent<SaveSkeleton>().scene == sceneNum)
+			{
+				skeleton2.storage[i].GetComponent<MeshRenderer>().enabled = true;
+				skeleton2.storage[i].GetComponent<SpriteRenderer>().enabled = true;
+			}
+			else
+			{
+				skeleton2.storage[i].GetComponent<MeshRenderer>().enabled = false;
+				skeleton2.storage[i].GetComponent<SpriteRenderer>().enabled = false;
+			}
+		}
+		NextScene ();
+
 	}
 
 }

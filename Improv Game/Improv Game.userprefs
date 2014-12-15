@@ -1,12 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ChoiceText.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GamePhases.cs">
     <Files>
-      <File FileName="Assets\PropScript.cs" Line="23" Column="23" />
-      <File FileName="Assets\Storage.cs" Line="1" Column="1" />
-      <File FileName="Assets\ClothesAndHat.cs" Line="7" Column="32" />
-      <File FileName="Assets\SaveSkeleton.cs" Line="12" Column="57" />
-      <File FileName="Assets\Scripts\ChoiceText.cs" Line="102" Column="26" />
+      <File FileName="Assets\Scripts\GamePhases.cs" Line="45" Column="10" />
+      <File FileName="Assets\Scripts\ChoiceText.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PropScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DirectorVoice.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

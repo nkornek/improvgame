@@ -38,6 +38,16 @@ public class WriterControls : MonoBehaviour {
         }
         playerControls();    
     }
+
+	public void StartWriterTurn()
+	{
+		for (int i = 0; i < choiceScript.selection.Length; i++)
+		{
+			choiceScript.selection[i] = choiceScript.blankSelection;
+		}
+		choiceScript.SetText ();
+		choosePlayer ();
+	}
 	
 	public void choosePlayer()
 	{
