@@ -17,7 +17,7 @@ public class CameraAnimationTriggers : MonoBehaviour {
 
     void StartGame()
     {
-        Application.LoadLevelAsync(2);
+        Application.LoadLevel(2);
     }
 
 }

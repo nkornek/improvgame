@@ -7,7 +7,7 @@ public class ZigStart : MonoBehaviour {
 
 
 	// Use this for initialization
-	void awake () {
+	void Awake () {
 		DontDestroyOnLoad(transform.gameObject);
 	}
 

@@ -51,6 +51,7 @@
      <Compile Include="Assets\PBL\Script\HUD.cs" />
      <Compile Include="Assets\STARTTHISGAMEGUY.cs" />
      <Compile Include="Assets\SaveString.cs" />
+     <Compile Include="Assets\Screenshotter.cs" />
      <Compile Include="Assets\Scripts\ActDatabase.cs" />
      <Compile Include="Assets\Scripts\ActorControls.cs" />
      <Compile Include="Assets\Scripts\BeutifulFaceScript.cs" />

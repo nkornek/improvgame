@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SaveSkeleton.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraAnimationTriggers.cs">
     <Files>
-      <File FileName="Assets\SaveString.cs" Line="33" Column="1" />
-      <File FileName="Assets\Scripts\GamePhases.cs" Line="174" Column="1" />
-      <File FileName="Assets\Scripts\SaveSkeleton.cs" Line="8" Column="35" />
+      <File FileName="Assets\Scripts\CameraAnimationTriggers.cs" Line="18" Column="21" />
+      <File FileName="Assets\Screenshotter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LobbyControl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
