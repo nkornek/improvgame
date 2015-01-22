@@ -16,7 +16,7 @@ public class WriterControls : MonoBehaviour {
     GamePadState prevState;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         controllerMaster = GameObject.Find("Controllers").GetComponent<GetControllers>();
 	}
 	

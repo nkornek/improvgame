@@ -1,6 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SaveSkeleton.cs">
+    <Files>
+      <File FileName="Assets\SaveString.cs" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\GamePhases.cs" Line="174" Column="1" />
+      <File FileName="Assets\Scripts\SaveSkeleton.cs" Line="8" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
